@@ -20,6 +20,7 @@
    ========================================================================
 */
 #include <stdio.h>
+#include <stdlib.h>
 
 /*
    ========================================================================
@@ -57,7 +58,7 @@
 int StartMenue(void); // Chung
 void RegistrierungMenue(void); // Henning
 void LoginMenue(void); // Omar
-int HauptMenue(); // Sven
+int HauptMenue(void); // Sven
 int SchwierigkeitMenue(void); // Chung
 void Regelwerk(void); // Sven
 void Bestenliste(void);
@@ -71,32 +72,55 @@ int** InitSudoku(int schwierigkeitsgrad);
    ========================================================================
 */
 int main(void) {
-	int rueckgabeStart = -1;
+	 LoginMenue(); // Omar
+	/*int rueckgabeStart = -1;
 	int rueckgabeHauptMenue = -1;
 	int schwierigkeitsgrad = -1;
 	do {
 		rueckgabeStart = StartMenue();
-		if (rueckgabeStart == STARTMENUE_LOGIN) {
+		if (rueckgabeStart == STARTMENUE_LOGIN)
+		{
 			LoginMenue();
 		}
-		else if (rueckgabeStart == STARTMENUE_REGISTER) {
+		else if (rueckgabeStart == STARTMENUE_REGISTER) 
+		{
 			RegistrierungMenue();
 		}
-		else if (rueckgabeStart != STARTMENUE_END) {
+		else if (rueckgabeStart != STARTMENUE_END) 
+		{
 			do {
 				rueckgabeHauptMenue = HauptMenue();
-				if (rueckgabeHauptMenue == HAUPTMENUE_SPIEL) {
+				if (rueckgabeHauptMenue == HAUPTMENUE_SPIEL)
+				{
 					schwierigkeitsgrad = SchwierigkeitMenue();
 				}
-				else if (rueckgabeHauptMenue == HAUPTMENUE_REGEL) {
+				else if (rueckgabeHauptMenue == HAUPTMENUE_REGEL)
+				{
 					Regelwerk();
 				}
-				else if (rueckgabeHauptMenue == HAUPTMENUE_LISTE) {
+				else if (rueckgabeHauptMenue == HAUPTMENUE_LISTE)
+				{
 					Bestenliste();
 				}
 			} while (rueckgabeHauptMenue != HAUPTMENUE_LOGOUT);
 		}
 	} 
-	while(rueckgabeStart != STARTMENUE_END);
+	while(rueckgabeStart != STARTMENUE_END);*/
+	 system("pause");
 	return 0;
+}
+/*
+   ========================================================================
+    LoginMenue()
+   ========================================================================
+*/
+void LoginMenue(void)
+{
+	printf("\n\n");
+	printf("A N M E L D U N G \n");
+    printf("= = = = = = = = = \n\n");
+	printf("Bitte geben Sie in dem eingeblendeten Format den Nutzernamen und das Passwort Ihres registrierten Kontos ein.\n\n");
+	printf("FORMAT \n");
+    printf("Nutzername Passwort (mit Leerzeihchen getrennt) \n\n");
+	printf("Ihre Eingabe:");
 }
