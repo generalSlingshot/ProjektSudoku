@@ -1,0 +1,48 @@
+Schnittstellen 
+// globale Variable Nutzername
+
+int main();
+
+
+int Startmenue();
+// über Datenbank
+Rückgabewert Startmenü:
+0: Ende
+1: void RegistrierungMenue();
+2: void LoginMenue();
+
+int HauptMenue();
+Rückgabewert Hauptmenü:
+0: Ende
+1: int SchwierigkeitMenue();
+2: void Regelwerk();
+3: void Bestenliste();
+4: void Abmelden();
+
+Rückgabewert Schwierigkeitsmenü():
+1: leicht
+2: mittel
+3: schwer
+
+int SudokuSpiel(int schwiergikeitsgrad);
+**int InitSudoku(int schwiergikeitsgrad);
+
+#define LEICHT 1
+#define MITTEL 2
+#define SCHWER 3
+
+#define SUDOKU_WIN 1
+#define SUDOKU_LOSE 0
+
+#define HAUPTMENUE_SPIEL 1
+#define HAUPTMENUE_REGEL 2
+#define HAUPTMENUE_LISTE 3
+#define HAUPTMENUE_LOGOUT 4
+#define HAUPTMENUE_END 0
+
+#define STARTMENUE_LOGIN 1
+#define STARTMENUE_REGISTER 2
+#define STARTMENUE_END 0
+
+
+
