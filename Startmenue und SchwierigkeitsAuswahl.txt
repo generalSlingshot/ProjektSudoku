@@ -1,0 +1,91 @@
+void printSchwierigkeitsAuswahl(void);
+void printStartMenue(void);
+
+int StartMenue() {
+	char cAuswahl;
+	int bFalscheingabe = FALSE;
+
+	do {
+		system("cls");
+		printStartMenue();
+		if (bFalscheingabe == TRUE) {
+			printf("\n  Falschangabe, ihre Angabe war: %c", cAuswahl);
+		}
+
+		printf("\n  Ihre Auswahl: ");
+		fflush(stdin);
+		scanf("%c", &cAuswahl);
+
+		switch(cAuswahl) {
+			case '1': 
+			case '2': 
+			case 'x': bFalscheingabe = FALSE;
+					break;
+			default:bFalscheingabe = TRUE;
+		}
+	} while (bFalscheingabe == TRUE);
+
+	if (cAuswahl == '1') {
+		return STARTMENUE_LOGIN;
+	} else if (cAuswahl == '2') {
+		return STARTMENUE_REGISTER;
+	} else if (cAuswahl == 'x') {
+		return STARTMENUE_END;
+	}
+}
+
+void printStartMenue(void) {
+	printf("\n\n");
+	printf("  S U D O K U S T A R T\n");
+	printf("  = = = = = = = = = = =\n\n");
+
+	printf("  Geben sie zum Ausfuehren einer Aktion eins der angegebenen Zeichen ein.\n");
+	printf("  1: In einem bereits existierenden Nutzerkonto einloggen.\n");
+	printf("  2: Einen neuen Benutzer registrieren.\n");
+	printf("  x: Das Programm beenden.\n");
+}
+
+int SchwierigkeitMenue(void) {
+	char cAuswahl;
+	int bFalscheingabe = FALSE;
+
+	do {
+		system("cls");
+		printSchwierigkeitsAuswahl();
+		if (bFalscheingabe == TRUE) {
+			printf("\n  Falschangabe, ihre Angabe war: %c", cAuswahl);
+		}
+
+		printf("\n  Ihre Auswahl: ");
+		fflush(stdin);
+		scanf("%c", &cAuswahl);
+
+		switch(cAuswahl) {
+			case '1': 
+			case '2': 
+			case '3': bFalscheingabe = FALSE;
+					break;
+			default:bFalscheingabe = TRUE;
+
+		}
+	} while (bFalscheingabe == TRUE);
+
+	if (cAuswahl == '1') {
+		return LEICHT;
+	} else if (cAuswahl == '2') {
+		return MITTEL;
+	} else if (cAuswahl == '3'){
+		return SCHWER;
+	}
+}
+
+void printSchwierigkeitsAuswahl(void) {
+	printf("\n\n");
+	printf("  S C H W I E R I G K E I T S A U S W A H L\n");
+	printf("  = = = = = = = = = = = = = = = = = = = = =\n\n");
+
+	printf("  Bitte waehlen Sie ein Schwierigkeitsgrad aus.\n");
+	printf("  1: Leicht\n");
+	printf("  2: Mittel\n");
+	printf("  3: Schwer\n");
+}
