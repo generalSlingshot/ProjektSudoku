@@ -1,0 +1,68 @@
+void Hauptmenueprint(void) {
+	
+	char USERNAME[] = "User";
+	// Ueberschrift
+	printf("\n\n  H A U P T M E N U E\n");
+	printf("  - - - - - - - - - -\n\n");
+
+	// Usergruss
+	printf("  Hallo, %s!\n", &USERNAME);
+
+	// Userhinweis
+	printf("  Geben Sie bitte zum Ausfuehren einer Aktion eins der"
+	       " eingeblendeten Zeichen ein.\n\n");
+
+	// Auswahl im Hauptmenue
+	printf("  1: Spiel starten\n"
+		   "  2: Regeln\n"
+		   "  3: Bestenliste\n"
+		   "  4: Abmelden\n"
+		   "  x: Beenden\n\n");
+
+}
+int HauptmenueAufruf(void) {
+
+	char cUserEingabe;
+	int bFalscheingabe = FALSE;
+
+	do {
+		system("cls");
+		Hauptmenueprint();
+
+		// Falscheingabenpruefung
+		if(bFalscheingabe == TRUE) {
+			printf("  Ihre Angabe %c war leider falsch,"
+				   " bitte versuchen sie es erneut!\n", cUserEingabe);
+		} 
+		printf("  Ihre Eingabe:  ");
+
+		// Eingabe
+		fflush(stdin);
+		scanf("%c", &cUserEingabe);
+
+		// Switch
+		switch(cUserEingabe) {
+
+			case '1': printf("Test 1"); //Schwierigkeitsmenue(void);
+					system("pause");bFalscheingabe = FALSE;
+					break;
+
+			case '2': printf("Test 2"); //Regelwerk(void);
+					system("pause");bFalscheingabe = FALSE;
+					break;
+
+			case '3': printf("Test 3"); //Bestenliste(void);
+					system("pause");bFalscheingabe = FALSE;
+					break;
+
+			case '4': printf("Test 4"); //return HAUPTMENUE_LOGOUT;
+					system("pause");bFalscheingabe = FALSE;
+					break;
+
+			case 'x': printf("Test X");//HAUPTMENUE_END
+					system("pause");bFalscheingabe = FALSE;
+					break;
+			default : bFalscheingabe = TRUE;
+		}
+	} while(bFalscheingabe == TRUE);
+}
