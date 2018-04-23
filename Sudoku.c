@@ -54,12 +54,12 @@
    Prototypen
    ========================================================================
 */
-int StartMenue(void);
-void RegistrierungMenue(void);
-void LoginMenue(void);
-int HauptMenue();
-int SchwierigkeitMenue(void);
-void Regelwerk(void);
+int StartMenue(void); // Chung
+void RegistrierungMenue(void); // Henning
+void LoginMenue(void); // Omar
+int HauptMenue(); // Sven
+int SchwierigkeitMenue(void); // Chung
+void Regelwerk(void); // Sven
 void Bestenliste(void);
 void Abmelden(void);
 int SudokuSpiel(int schwierigkeitsgrad);
