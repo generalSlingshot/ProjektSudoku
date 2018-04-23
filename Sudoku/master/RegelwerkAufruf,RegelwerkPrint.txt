@@ -1,0 +1,46 @@
+void RegelwerkAufruf(void) {
+	char bFalscheingabe = FALSE;
+	char cUserEingabe;
+
+	do {
+		system("cls");
+		RegelwerkPrint();
+
+		// Falscheingabenpruefung
+		if(bFalscheingabe == TRUE) {
+			printf("  Bitte 'x' eingeben.\n");
+		} 
+		printf("  Ihre Eingabe:  ");
+
+		// Eingabe
+		fflush(stdin);
+		scanf("%c", &cUserEingabe);
+
+		// Switch
+		switch(cUserEingabe) {
+
+			case 'x': bFalscheingabe = FALSE;
+					break;
+			default : bFalscheingabe = TRUE;
+		}
+	} while(bFalscheingabe == TRUE);
+}
+void RegelwerkPrint(void) {
+
+	printf("\n\n  R E G E L W E R K\n");
+	printf("  = = = = = = = = =\n\n");
+	printf("  1. Jede Ziffer von 1 bis 9 darf nur einmal pro Zeile"
+		   ", Spalte und 3x3-Block vorhanden sein.\n");
+	printf("  2. Jeder 3x3-Block ist dick umrandet\n");
+	printf("  3. Das Spiel ist gewonnen sobald alle Felder gefuellt"
+		   " sind. Es gibt nur eine Ergebnis\n");
+	printf("  4. Die Hilfsfunktion zeigt moegliche Ziffern fuer alle"
+		   " ungefuellten Felder an.\n");
+	printf("  5. Sobald kein Feld mehr richtig gefuellt werden kann"
+		   " verlieren Sie.\n");
+	printf("  6. Schnelligkeit zahlt sich aus. Stellen Sie eine der"
+		   " zehn besten Zeiten fuer Ihre ausgewaehlte Schwierigkeitsstufe"
+		   " auf, erzielen Sie einen Platz auf der Bestenliste.\n\n");
+	printf("  Geben Sie 'x' ein um den Dialog zu beenden.\n\n");
+
+}
