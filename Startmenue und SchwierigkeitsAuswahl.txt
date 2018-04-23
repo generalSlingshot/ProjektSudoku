@@ -9,10 +9,10 @@ int StartMenue() {
 		system("cls");
 		printStartMenue();
 		if (bFalscheingabe == TRUE) {
-			printf("\n  Falschangabe, ihre Angabe war: %c", cAuswahl);
+			printf("\n  Falschangabe, ihre Eingabe war: %c", cAuswahl);
 		}
 
-		printf("\n  Ihre Auswahl: ");
+		printf("\n  Ihre Eingabe: ");
 		fflush(stdin);
 		scanf("%c", &cAuswahl);
 
@@ -53,10 +53,10 @@ int SchwierigkeitMenue(void) {
 		system("cls");
 		printSchwierigkeitsAuswahl();
 		if (bFalscheingabe == TRUE) {
-			printf("\n  Falschangabe, ihre Angabe war: %c", cAuswahl);
+			printf("\n  Falschangabe, ihre Eingabe war: %c", cAuswahl);
 		}
 
-		printf("\n  Ihre Auswahl: ");
+		printf("\n  Ihre Eingabe: ");
 		fflush(stdin);
 		scanf("%c", &cAuswahl);
 
