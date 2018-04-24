@@ -1,0 +1,49 @@
+void LoginMenue(void) {
+
+	int bFalscheingabe = FALSE;
+	char cUsernameEingabe[NAME_MAX];
+	char cPasswortEingabe[PASSWORT_MAX];
+	int iArrayLength;
+	int Passcorrect;
+
+	do {
+
+		system("cls");
+		printf("\n\n  A N M E L D U N G\n");
+		printf("  = = = = = = = = =\n\n");
+		printf("  Bitte geben Sie den Nutzernamen und"
+			   " das Passwort Ihres registrierten Kontos ein.\n\n");
+		printf("  Bitte Nutzernamen eingeben: ");
+		scanf("%s", cUsernameEingabe);
+		iArrayLength = sizeof(cUsernameEingabe) / sizeof(cUsernameEingabe[0]);  
+
+	} while(iArrayLength >= NAME_MAX && iArrayLength <= NAME_MIN);
+
+	do {
+
+		system("cls");
+		printf("\n\n  A N M E L D U N G\n");
+		printf("  = = = = = = = = =\n\n");
+		printf("  Bitte geben Sie den Nutzernamen und"
+			   " das Passwort Ihres registrierten Kontos ein.\n\n");
+		printf("  Bitte Nutzernamen eingeben: %s\n\n", &cUsernameEingabe);
+		if(bFalscheingabe == TRUE) {
+			printf("  Bitte versuchen sie es erneut!\n");
+			bFalscheingabe = FALSE;
+		}
+		printf("  Bitte Passwort eingeben: ");
+		scanf("%s", cPasswortEingabe);
+		Passcorrect = strcmp(cPasswortEingabe,MyNutzer.sPasswort);
+		if(Passcorrect == 1) {
+			bFalscheingabe = TRUE;
+		}
+
+	}while(Passcorrect == 1);
+
+	system("cls");
+
+	printf("\n\n  Sie werden eingeloggt und zum Hauptmenue weitergeleitet...\n\n");
+	printf("  ");
+	system("pause");
+	
+}
