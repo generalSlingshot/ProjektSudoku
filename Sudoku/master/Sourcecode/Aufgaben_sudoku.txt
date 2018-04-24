@@ -1,0 +1,18 @@
+Aufgaben:
+Utils: 	- String split
+		- Hash
+		
+Funktionalitäten:	- Login: Daten aus der DB aufrufen, eingegebene daten mit der aus der Db matchen
+					- Registrierung: Daten in der DB speichern + komplett
+					- Bestenliste: Daten auslesen aus der Bestenliste
+					- Sudoku: 	- Spielfeld generieren
+								- einlesen von Eingaben/Dialog		
+								- DB Tabellen anlegen
+									- 1: Sudoku-Vorlagen: ID, Schiwerigkeit
+									- 2: Koordinaten: Wert, Koordinate X, Koordinate Y, FK: Sudoku-Vorlagen
+								- Spielfeld anzeigen
+								
+					- (Hilfsfunktion)
+					- Mergen
+					
+					
